@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>麦门抽奖情报局 · 麦当劳程序员创意开发大赛参赛作品</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#faf6f1;color:#241f21;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+.wrap{max-width:900px;margin:0 auto;padding:36px 20px 60px}
+.hero{background:linear-gradient(135deg,#DA291C,#f0503a);color:#fff;border-radius:20px;padding:34px 34px 30px;box-shadow:0 10px 30px rgba(218,41,28,.18)}
+.badge{display:inline-block;background:#FFC72C;color:#241f21;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+.hero h1{font-size:34px;letter-spacing:1px}
+.hero .sub{font-size:16px;opacity:.95;margin-top:6px}
+.hero .desc{margin-top:16px;font-size:14px;opacity:.92}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0 8px}
+.stat{background:#fff;border-radius:14px;padding:16px 10px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+.stat b{display:block;font-size:24px;color:#DA291C}
+.stat span{font-size:12px;color:#8a8587}
+.cta{display:flex;gap:12px;margin:22px 0 6px;flex-wrap:wrap}
+.btn{display:inline-block;background:#DA291C;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 22px;border-radius:999px;box-shadow:0 6px 16px rgba(218,41,28,.25)}
+.btn.ghost{background:#fff;color:#DA291C;border:2px solid #DA291C;box-shadow:none}
+.panel{background:#fff;border-radius:16px;padding:24px 26px;margin-top:18px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+.panel h2{font-size:17px;border-left:4px solid #FFC72C;padding-left:10px;margin-bottom:16px}
+.feat{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed #eee;font-size:14px}
+.feat:last-child{border-bottom:none}
+.feat .k{flex:0 0 118px;font-weight:700;color:#DA291C}
+.shot{margin:14px 0}
+.shot img{width:100%;border-radius:12px;border:1px solid #ece4d9;display:block}
+.shot .cap{font-size:12px;color:#8a8587;margin-top:6px;text-align:center}
+pre{background:#0d1117;color:#c9d1d9;border-radius:12px;padding:16px 18px;font-size:13px;overflow-x:auto;font-family:Consolas,Menlo,monospace}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.links a{font-size:13px;color:#DA291C;text-decoration:none;border:1px solid #f0d9d4;border-radius:999px;padding:6px 14px}
+footer{margin-top:26px;font-size:12px;color:#9aa0a6;border-top:1px dashed #e5e7eb;padding-top:14px;line-height:1.9}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:26px}}
+</style></head><body><div class="wrap">
+
+<div class="hero">
+  <span class="badge">1024 程序员节 · 麦当劳 MCP 创意开发大赛</span>
+  <h1>麦门抽奖情报局</h1>
+  <div class="sub">积分抽奖这件事，调用前就说清楚</div>
+  <div class="desc">回答另外四个问题：**现在到底能不能抽 · 还差多少分 · 奖池里有什么 · 攒分路径在哪**。</div>
+</div>
+
+<div class="stats"><div class='stat'><b>24</b><span>积分 / 次</span></div><div class='stat'><b>14.1</b><span>当前缺口</span></div><div class='stat'><b>10</b><span>项奖品构成</span></div><div class='stat'><b>16</b><span>项离线单测</span></div></div>
+
+<div class="cta">
+  <a class="btn" href="https://github.com/susevenci/mcd-prize-radar">⭐ 去 GitHub 点 Star</a>
+  <a class="btn ghost" href="https://github.com/susevenci/mcd-prize-radar#安装">查看安装与使用</a>
+</div>
+
+<div class="panel"><h2>它解决什么问题</h2><div class='feat'><span class='k'>不编概率</span><span>MCP 未公开中奖概率，本项目一个百分比数字都不输出，只统计奖品构成。</span></div><div class='feat'><span class='k'>只听服务端</span><span>能不能抽以 drawDecision.resourceEligible 为唯一真相，绝不靠 availableTimes 推断。</span></div><div class='feat'><span class='k'>默认不抽</span><span>draw 子命令先展示本次消耗，必须显式 --confirm 才发起，代码级落实工具契约。</span></div><div class='feat'><span class='k'>空态如实呈现</span><span>账号没有中奖记录就说没有，不假装失败、也不编数据。</span></div></div>
+
+<div class="panel"><h2>真实运行截图</h2><div class='shot'><img src='screenshot-check.png' alt='抽奖体检：真实活动 dtx2，还差 14.1 分'><div class='cap'>抽奖体检：真实活动 dtx2，还差 14.1 分</div></div><div class='shot'><img src='screenshot-prizes.png' alt='账号真实中奖记录'><div class='cap'>账号真实中奖记录</div></div></div>
+
+<div class="panel"><h2>30 秒跑起来</h2>
+<pre>git clone https://github.com/susevenci/mcd-prize-radar.git
+cd mcd-prize-radar          # 零依赖，Python 3.8+，无需 pip install
+python -m src.cli check</pre>
+<p style="font-size:13px;color:#8a8587;margin-top:10px">
+不配 Token 也能跑：所有命令都支持 <code>--offline</code>，用仓库内的脱敏样例数据即可验证全部逻辑。</p>
+</div>
+
+<div class="panel"><h2>作者的另外三个参赛作品</h2><div class="links"><a href='https://github.com/susevenci/mcd-safe-order'>麦麦安心点 · 特殊人群安全点餐三档筛查</a><a href='https://github.com/susevenci/mcd-store-truth'>麦当劳到店真相 · 券×门店 TRUE/FALSE/UNKNOWN 三态校验</a><a href='https://github.com/susevenci/mcd-moments'>麦门周报 · 订单生成单文件 HTML 年报</a></div></div>
+
+<footer>
+本页为麦当劳程序员创意开发大赛参赛作品的展示页，由项目文档自动生成；非麦当劳官方产品。<br>
+项目输出仅供参考，不构成医疗、营养或其他专业建议；餐品信息、价格及供应状态以麦当劳官方渠道的实时结果为准。<br>
+报名 Issue：<a href="https://github.com/M-China/mcd-developer-innovation-challenge/issues">#1342 – #1345</a>
+</footer>
+
+</div></body></html>
