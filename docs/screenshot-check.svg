@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" font-family="Consolas,monospace">
+<rect width="760" height="250" fill="#0d1117"/>
+<rect width="760" height="34" fill="#161b22"/>
+<circle cx="18" cy="17" r="5" fill="#ff5f57"/>
+<circle cx="36" cy="17" r="5" fill="#febc2e"/>
+<circle cx="54" cy="17" r="5" fill="#28c840"/>
+<text x="76" y="21" font-size="12" fill="#8b949e">python -m src.cli check</text>
+<text x="744" y="21" font-size="12" fill="#8b949e" text-anchor="end">麦当劳 MCP 实时数据 · 2026-10-25</text>
+<text x="18" y="49" font-size="14" fill="#8b949e" xml:space="preserve">【抽奖体检】麦麦积分抽奖</text>
+<text x="18" y="71" font-size="14" fill="#c9d1d9" xml:space="preserve">活动状态：进行中（2025-01-26&#160;00:00:00&#160;~&#160;2030-12-31&#160;23:59:59）</text>
+<text x="18" y="93" font-size="14" fill="#c9d1d9" xml:space="preserve">消耗规则：消耗积分抽奖｜单次需&#160;24&#160;积分</text>
+<text x="18" y="115" font-size="14" fill="#c9d1d9" xml:space="preserve">当前可用积分：9.9</text>
+<text x="18" y="137" font-size="14" fill="#c9d1d9" xml:space="preserve">服务端决策：resourceEligible=False（积分不足）</text>
+<text x="18" y="159" font-size="14" fill="#c9d1d9" xml:space="preserve">本次实际消耗：本次将消耗&#160;24&#160;积分</text>
+<text x="18" y="181" font-size="14" fill="#c9d1d9" xml:space="preserve">结论：⛔&#160;服务端判定不可抽（积分不足），还需&#160;14.1&#160;积分</text>
+<text x="18" y="203" font-size="14" fill="#c9d1d9" xml:space="preserve">还差&#160;14.1&#160;积分。</text>
+<text x="18" y="225" font-size="14" fill="#8b949e" xml:space="preserve">数据来源：麦当劳&#160;MCP&#160;query-lottery-info&#160;实时返回</text>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "warning": "演示用示例（账号当时无中奖记录）。真实运行时请用 query-my-prizes 实时数据。",
+    "note": "真实接口在账号无奖品时返回空 prizes 列表，本项目会给出空态文案而不是假装失败。"
+  },
+  "data": {
+    "prizes": [],
+    "pageNum": 1,
+    "pageSize": 10,
+    "hasMore": false,
+    "nextCursor": ""
+  }
+}
